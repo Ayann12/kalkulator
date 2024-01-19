@@ -13,8 +13,8 @@
     <div class="container">
         <h4 class="merk">Thelho Calculator</h4>
         <form action="" name="calc" class="calculator">
-            <input type="text" class="value" readonly name="txt">
-            <span class="num clear" onclick="calc.txt.value+=''"><i>c</i></span>
+            <input type="text" id="value" class="value" readonly name="txt" placeholder="0">
+            <span class="num clear" onclick="clearin()"><i>c</i></span>
             <span class="num" onclick="calc.txt.value+='/'"><i>/</i></span>
             <span class="num" onclick="calc.txt.value+='*'"><i>*</i></span>
             <span class="num" onclick="calc.txt.value+='7'"><i>7</i></span>
@@ -34,6 +34,12 @@
             <span class="num equal" onclick="document.calc.txt.value=eval(calc.txt.value)"><i>=</i></span>
         </form>
     </div>
+
+    <script>
+        function clearin() {
+            document.getElementById('value').value = '';
+        }
+    </script>
 
 </body>
 
